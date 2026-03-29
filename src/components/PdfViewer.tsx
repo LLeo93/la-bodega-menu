@@ -10,25 +10,27 @@ export default function PdfViewer({ file, onClose }: Props) {
         <button
           onClick={onClose}
           className="text-sm text-neutral-300 hover:text-[#C9A96E] transition tracking-wide"
-          aria-label="Chiudi menu"
+          aria-label="Cerrar menú"
         >
-          ← Back
+          ← Volver
         </button>
 
         <div className="text-xs tracking-widest text-neutral-500 uppercase">
-          Menu
+          Menú
         </div>
 
         <a
           href={file}
           target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Abrir archivo PDF en una nueva pestaña"
           className="text-sm text-[#C9A96E] hover:opacity-80"
         >
-          Open PDF
+          Abrir PDF
         </a>
       </div>
 
-      <iframe src={file} className="flex-1 w-full" title="Menu PDF" />
+      <iframe src={file} className="flex-1 w-full" title="Menú PDF" />
     </div>
   );
 }

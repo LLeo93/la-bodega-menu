@@ -20,11 +20,15 @@ export default function MenuSelector({ onSelect }: Props) {
 
   return (
     <>
-      {/* LOADING OVERLAY */}
       {loading && (
-        <div className="fixed inset-0 flex items-center justify-center bg-black/80 z-40">
+        <div
+          role="dialog"
+          aria-live="polite"
+          aria-busy="true"
+          className="fixed inset-0 flex items-center justify-center bg-black/80 z-40"
+        >
           <span className="text-[#C9A96E] text-sm tracking-widest">
-            Loading menu...
+            Cargando menú...
           </span>
         </div>
       )}
@@ -33,7 +37,7 @@ export default function MenuSelector({ onSelect }: Props) {
         <button
           onClick={() => handleSelect('/Menu Cocktails.pdf')}
           className="cursor-pointer group relative w-72 p-8 rounded-2xl bg-linear-to-b from-[#1a1a1c] to-[#111112] border border-[#C9A96E] hover:border-[#C9A96E] transition-all duration-500 shadow-lg hover:shadow-[#C9A96E]/10 hover:-translate-y-1"
-          aria-label="Apri menu cocktails"
+          aria-label="Abrir menú de cócteles"
         >
           <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition bg-[#C9A96E]/5 blur-xl " />
 
@@ -43,13 +47,13 @@ export default function MenuSelector({ onSelect }: Props) {
             </div>
 
             <h2 className="text-2xl tracking-wide group-hover:text-[#C9A96E] transition">
-              Cocktails
+              Cócteles
             </h2>
 
             <div className="w-10 h-px bg-neutral-700 my-3 group-hover:bg-[#C9A96E]" />
 
             <p className="text-xs text-neutral-300 tracking-wider uppercase">
-              Classics & Signature
+              Clásicos y de Autor
             </p>
           </div>
         </button>
@@ -57,7 +61,7 @@ export default function MenuSelector({ onSelect }: Props) {
         <button
           onClick={() => handleSelect('/Menu Spirits.pdf')}
           className="cursor-pointer group relative w-72 p-8 rounded-2xl bg-linear-to-b from-[#1a1a1c] to-[#111112] border border-[#2a2a2c] hover:border-[#C9A96E] transition-all duration-500 shadow-lg hover:shadow-[#C9A96E]/10 hover:-translate-y-1"
-          aria-label="Apri menu spirits"
+          aria-label="Abrir menú de licores"
         >
           <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition bg-[#C9A96E]/5 blur-xl" />
 
@@ -67,13 +71,13 @@ export default function MenuSelector({ onSelect }: Props) {
             </div>
 
             <h2 className="text-2xl tracking-wide group-hover:text-[#C9A96E] transition ">
-              Spirits
+              Licores
             </h2>
 
             <div className="w-10 h-px bg-neutral-700 my-3 group-hover:bg-[#C9A96E]" />
 
             <p className="text-xs text-neutral-300 tracking-wider uppercase">
-              Premium Selection
+              Selección Premium
             </p>
           </div>
         </button>
