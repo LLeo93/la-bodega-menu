@@ -2,16 +2,12 @@ import { CocktailIcon } from './CocktailIcon';
 import { SpiritsIcon } from './SpiritsIcon';
 import { useState } from 'react';
 
-type Props = {
-  onSelect: (menu: string) => void;
-};
-
-export default function MenuSelector({ onSelect }: Props) {
+export default function MenuSelector() {
   const [loading, setLoading] = useState(false);
 
   const handleSelect = (menu: string) => {
     setLoading(true);
-    onSelect(menu);
+    window.open(menu, '_self', 'noopener,noreferrer');
 
     setTimeout(() => {
       setLoading(false);
