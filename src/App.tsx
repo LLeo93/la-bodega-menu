@@ -27,7 +27,7 @@ export default function App() {
   }, [locale]);
   return (
     <div className="flex flex-col min-h-screen bg-[#0a0a0a] text-white overflow-x-hidden">
-      <main className="flex-1 relative z-10 w-full flex flex-col items-center px-4">
+      <main className="flex-1 relative z-10 w-full flex flex-col items-center px-4 pb-20">
         {/* <div className="absolute -top-25 w-125 h-125 bg-[#C9A96E]/10 blur-[120px] rounded-full" /> */}
 
         <div className="relative z-10 w-full flex flex-col items-center px-4">
@@ -35,8 +35,8 @@ export default function App() {
           <LanguageSwitcher />
           <MenuSelector />
         </div>
-        <Footer />
       </main>
+      <Footer />
     </div>
   );
 }
