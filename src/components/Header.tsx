@@ -10,7 +10,7 @@ export default function Header() {
       <div className="w-20 h-px bg-linear-to-r from-transparent via-[#C9A96E] to-transparent mx-auto my-6 opacity-70" />
 
       <p className="text-neutral-300 text-xs tracking-[0.3em] uppercase">
-        Cócteles de autor, licores clásicos y un ambiente refinato.
+        Cócteles de autor, licores clásicos y un ambiente refinado.
       </p>
       <p className="text-xs text-neutral-400 uppercase tracking-widest mt-6">
         Selecciona tu menú
